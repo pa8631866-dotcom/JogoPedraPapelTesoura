@@ -1,5 +1,10 @@
 public class Pedra extends Opcao {
     public Pedra() {
-        super("src/fist.png");
+        super("static/fist.png");
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName();
     }
 }

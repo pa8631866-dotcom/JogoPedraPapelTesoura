@@ -1,5 +1,10 @@
 public class Tesoura extends Opcao {
     public Tesoura() {
-        super("src/victory.png");
+        super("static/victory.png");
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName();
     }
 }

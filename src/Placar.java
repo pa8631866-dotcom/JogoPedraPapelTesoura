@@ -28,4 +28,10 @@ public class Placar {
     public Map<Jogador, Integer> getPontuacao() {
         return pontuacao;
     }
+
+    @Override
+    public String toString() {
+        return String.join(" | ", pontuacao.entrySet().stream().map(
+                x -> "[" + x.getKey() + "] "+ x.getValue()).toArray(String[]::new));
+    }
 }

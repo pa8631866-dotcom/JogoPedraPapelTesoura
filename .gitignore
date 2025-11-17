@@ -29,4 +29,4 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-src/db.txt
+db.txt

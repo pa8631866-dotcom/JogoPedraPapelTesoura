@@ -4,7 +4,7 @@ public class Pessoa extends Jogador implements Ouvinte {
     private CompletableFuture<Opcao> future = new CompletableFuture<>();
 
     public Pessoa() {
-        super("src/wink.png", "src/tongue-out.png", "Você ganhou!");
+        super("static/wink.png", "static/tongue-out.png", "Você ganhou!");
     }
 
     @Override
@@ -17,5 +17,10 @@ public class Pessoa extends Jogador implements Ouvinte {
         var futureAntiga = future;
         future = new CompletableFuture<>();
         futureAntiga.complete(opcao);
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName();
     }
 }

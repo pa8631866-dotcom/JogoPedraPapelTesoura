@@ -5,7 +5,7 @@ public class Computador extends Jogador {
     private Random random = new Random();
 
     public Computador() {
-        super("src/robot.png", "src/crying.png", "Você perdeu!");
+        super("static/robot.png", "static/crying.png", "Você perdeu!");
     }
 
     @Override
@@ -15,5 +15,10 @@ public class Computador extends Jogador {
         var future =  new CompletableFuture<Opcao>();
         future.complete(escolha);
         return future;
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName();
     }
 }

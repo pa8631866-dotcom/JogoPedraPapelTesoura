@@ -1,5 +1,10 @@
 public class Papel extends Opcao {
     public Papel() {
-        super("src/hand.png");
+        super("static/hand.png");
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName();
     }
 }

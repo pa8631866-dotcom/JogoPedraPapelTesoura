@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class Persistencia {
-    private static String NomeDoArquivo = "src/db.txt";
+    private static String NomeDoArquivo = "db.txt";
     private static String Separador = "-";
 
     private int[] pontos = { 0, 0 };
