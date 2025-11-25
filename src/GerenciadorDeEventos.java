@@ -7,15 +7,22 @@ import java.util.List;
 import java.util.Map;
 
 public class GerenciadorDeEventos implements ActionListener {
-    private Map<JButton, Opcao> botaoDeCadaOpcao = new HashMap<>();
-    private List<Ouvinte> ouvintes = new ArrayList<>();
+    private Map<JButton, Opcao> botaoDeCadaOpcao;
+    private List<Ouvinte> ouvintes;
+
+    public GerenciadorDeEventos() {
+        botaoDeCadaOpcao = new HashMap<>();
+        ouvintes = new ArrayList<>();
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() instanceof JButton botao) {
             Opcao opcao = botaoDeCadaOpcao.get(botao);
             if (opcao != null) {
-                ouvintes.forEach(ouvinte -> ouvinte.alertarEscolha(opcao));
+                for (int i = 0; i < ouvintes.size(); i++) {
+                    ouvintes.get(i).alertarEscolha(opcao);
+                }
             }
         }
     }

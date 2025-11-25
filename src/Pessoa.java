@@ -1,10 +1,12 @@
 import java.util.concurrent.CompletableFuture;
 
 public class Pessoa extends Jogador implements Ouvinte {
-    private CompletableFuture<Opcao> future = new CompletableFuture<>();
+    private CompletableFuture<Opcao> future;
 
     public Pessoa() {
         super("static/wink.png", "static/tongue-out.png", "Você ganhou!");
+
+        future = new CompletableFuture<>();
     }
 
     @Override
